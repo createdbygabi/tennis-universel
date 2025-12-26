@@ -86,7 +86,7 @@ export default function News() {
               Dernières actualités
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-              Restez informé des dernières actualités du monde du tennis
+              Restez informé des dernières actualités du monde du tennis.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">

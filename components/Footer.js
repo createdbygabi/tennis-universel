@@ -16,10 +16,9 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-4 sm:mb-6 leading-relaxed max-w-md text-sm sm:text-base">
               Tennis Universel vous propose des interviews exclusives en direct
-              avec des légendes du tennis, des étoiles montantes et des experts
-              de l'industrie. <br className="hidden sm:block" /> Rejoignez-nous
-              sur Instagram pour des conversations passionnantes sur le monde du
-              tennis.
+              avec des acteurs et actrices du monde tennistique.{" "}
+              <br className="hidden sm:block" /> Rejoignez-nous sur Instagram
+              pour des conversations passionnantes sur le monde du tennis.
             </p>
             <a
               href="https://instagram.com/tennisuniversel"
@@ -83,7 +82,7 @@ export default function Footer() {
               </a>
               <p className="text-gray-400 text-xs sm:text-sm">
                 Suivez-nous pour des interviews en direct et des actualités
-                tennis
+                tennis.
               </p>
             </div>
           </div>

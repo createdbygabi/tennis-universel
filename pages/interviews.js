@@ -174,7 +174,7 @@ export default function Interviews() {
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                   Suivez-nous sur Instagram pour ne manquer aucune interview et
-                  faire partie de la communauté Tennis Universel
+                  faire partie de la communauté Tennis Universel.
                 </p>
                 <a
                   href="https://instagram.com/tennisuniversel"

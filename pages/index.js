@@ -106,7 +106,7 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie. Un média social passionné par le tennis."
+          content="Découvrez nos interviews exclusives avec des acteurs et actrices du monde tennistique. Un média social passionné par le tennis."
         />
         <meta
           property="og:title"
@@ -114,7 +114,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie."
+          content="Découvrez nos interviews exclusives avec des acteurs et actrices du monde tennistique."
         />
         <meta property="og:url" content="https://www.tennisuniversel.com" />
         <meta
@@ -123,7 +123,7 @@ export default function Home() {
         />
         <meta
           name="twitter:description"
-          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie."
+          content="Découvrez nos interviews exclusives avec des acteurs et actrices du monde tennistique."
         />
       </Head>
       <div className="min-h-screen">
@@ -154,8 +154,8 @@ export default function Home() {
                   Tennis Universel
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-8 sm:mb-10 md:mb-12 leading-relaxed tracking-tight font-light">
-                  Découvrez nos interviews exclusives avec des légendes du
-                  tennis, des étoiles montantes et des experts de l'industrie
+                  Découvrez nos interviews exclusives avec des acteurs et
+                  actrices du monde tennistique.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5">
                   <a
@@ -302,7 +302,7 @@ export default function Home() {
                 Plus d'interviews
               </h2>
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed font-light tracking-tight mb-8 sm:mb-10 md:mb-12">
-                Explorez nos archives de conversations exclusives
+                Explorez nos archives de conversations exclusives.
               </p>
             </div>
             {loadingMoreReels ? (
@@ -346,7 +346,7 @@ export default function Home() {
             ) : (
               <div className="text-center py-8 sm:py-12">
                 <p className="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
-                  Plus d'interviews à venir bientôt
+                  Plus d'interviews à venir bientôt.
                 </p>
                 <Link
                   href="/interviews"

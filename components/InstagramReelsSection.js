@@ -80,7 +80,7 @@ export default function InstagramReelsSection({
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
               Des lives Instagram avec des acteurs et actrices du monde
-              tennistique qui racontent leurs histoires liées à la balle jaune
+              tennistique qui racontent leurs histoires liées à la balle jaune.
             </p>
             <a
               href="/interviews"
@@ -127,7 +127,7 @@ export default function InstagramReelsSection({
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
             Des lives Instagram avec des acteurs et actrices du monde
-            tennistique qui racontent leurs histoires liées à la balle jaune
+            tennistique qui racontent leurs histoires liées à la balle jaune.
           </p>
           <a
             href="/interviews"
