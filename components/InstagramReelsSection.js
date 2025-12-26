@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import InstagramReel from "./InstagramReel";
+import Link from "next/link";
 
-export default function InstagramReelsSection() {
+export default function InstagramReelsSection({
+  limit = null,
+  showViewMore = false,
+}) {
   const [reels, setReels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,34 +33,17 @@ export default function InstagramReelsSection() {
         return;
       }
 
-      // Transform the data to match our component structure
-      const transformedReels = data.data.map((reel, index) => {
-        // Extract guest name from caption if possible
-        const caption = reel.caption || "";
-        const guestMatch = caption.match(
-          /(?:with|featuring|interview with)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/i
-        );
-        const guest = guestMatch ? guestMatch[1] : `Interview ${index + 1}`;
+      // Just use the reel URLs - Instagram will handle all the display
+      const transformedReels = data.data.map((reel) => ({
+        id: reel.id,
+        reelUrl: reel.reelUrl,
+      }));
 
-        // Format date
-        const date = new Date(reel.timestamp);
-        const formattedDate = date.toLocaleDateString("fr-FR", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        });
-
-        return {
-          id: reel.id,
-          reelUrl: reel.reelUrl,
-          guest: guest,
-          date: formattedDate,
-          description:
-            caption.length > 150 ? caption.substring(0, 150) + "..." : caption,
-        };
-      });
-
-      setReels(transformedReels);
+      // Apply limit if specified
+      const finalReels = limit
+        ? transformedReels.slice(0, limit)
+        : transformedReels;
+      setReels(finalReels);
       setError(null);
     } catch (err) {
       console.error("Error fetching Instagram reels:", err);
@@ -198,17 +185,36 @@ export default function InstagramReelsSection() {
           </a>
         </div>
         {reels.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {reels.map((reel) => (
-              <InstagramReel
-                key={reel.id}
-                reelUrl={reel.reelUrl}
-                guest={reel.guest}
-                date={reel.date}
-                description={reel.description}
-              />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              {reels.map((reel) => (
+                <InstagramReel key={reel.id} reelUrl={reel.reelUrl} />
+              ))}
+            </div>
+            {showViewMore && limit && (
+              <div className="text-center">
+                <Link
+                  href="/interviews"
+                  className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+                >
+                  <span>Voir plus</span>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-20">
             <p className="text-gray-600 text-lg">

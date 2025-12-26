@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* Instagram Reels Section - Last 3 Interviews */}
-      <InstagramReelsSection />
+      <InstagramReelsSection limit={3} showViewMore={true} />
 
       {/* About Section */}
       <section className="py-40 px-6 lg:px-8 bg-gray-50">

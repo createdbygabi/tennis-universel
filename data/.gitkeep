@@ -1,0 +1,3 @@
+# This directory stores cached Instagram reels data
+# The instagram-reels.json file will be created by the cron job
+
