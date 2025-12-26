@@ -28,25 +28,37 @@ export default async function handler(req, res) {
 
     // Try to find the file
     for (const possiblePath of possiblePaths) {
-      if (fs.existsSync(possiblePath)) {
-        filePath = possiblePath;
-        try {
+      try {
+        if (fs.existsSync(possiblePath)) {
+          filePath = possiblePath;
           const fileContent = fs.readFileSync(possiblePath, "utf8");
           cachedData = JSON.parse(fileContent);
-          break;
-        } catch (err) {
-          console.error(`[API] Error reading file at ${possiblePath}:`, err);
-          continue;
+          if (cachedData && cachedData.reels) {
+            break;
+          }
         }
+      } catch (err) {
+        console.error(
+          `[API] Error reading file at ${possiblePath}:`,
+          err.message
+        );
+        continue;
       }
     }
 
     // If file not found, return empty array (don't fail)
-    if (!cachedData || !cachedData.reels) {
-      console.log(`[API] No reels file found. Returning empty array.`);
+    if (!cachedData || !cachedData.reels || !Array.isArray(cachedData.reels)) {
+      console.log(
+        `[API] No reels file found or invalid data. Tried paths:`,
+        possiblePaths
+      );
+      console.log(`[API] Current working directory:`, process.cwd());
+      console.log(`[API] __dirname:`, __dirname);
+
+      // Return empty array - page will still render
       return res.status(200).json({
         data: [],
-        message: "No reels found",
+        message: "No reels found - file not accessible",
       });
     }
 
