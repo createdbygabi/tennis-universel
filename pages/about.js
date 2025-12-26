@@ -6,26 +6,15 @@ export default function About() {
           <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 block">
             À propos
           </span>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            TennisUniversel
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 font-serif">
+            Tennis Universel
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Votre source d'interviews et d'actualités tennis exclusives
-          </p>
         </div>
 
         <div className="prose prose-lg max-w-none">
           <div className="bg-gray-50 rounded-3xl p-12 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Notre mission</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              TennisUniversel est dédié à offrir aux fans de tennis un accès exclusif aux 
-              figures les plus influentes du sport. Grâce à nos interviews en direct sur Instagram, 
-              nous créons une plateforme où les légendes, les étoiles montantes et les experts de l'industrie partagent 
-              leurs histoires, leurs idées et leur passion pour le tennis.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Nous croyons que derrière chaque grand joueur se cache une histoire inspirante, et nous sommes 
-              là pour vous raconter ces histoires directement, en temps réel.
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              Nous sommes une communauté de passionné.es de tennis. Tout est parti d'une discussion Whatsapp pendant le covid entre ami.e.s et connaissances. Ce sport nous "rend fou" comme dirait Gilles Simon. Bienvenu.e.s à toutes et à tous sur Tennis Universel. Ce site web a pour but de rendre la balle jaune accessible à l'ensemble de l'humanité.
             </p>
           </div>
 
@@ -33,34 +22,32 @@ export default function About() {
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
               <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Interviews en direct</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 font-serif">Une équipe passionnée</h3>
               <p className="text-gray-600 leading-relaxed">
-                Animez des conversations en direct sur Instagram avec des professionnels du tennis, 
-                permettant aux fans d'interagir et de poser des questions en temps réel.
+                Nous sommes une équipe originale composée d'individus aux racines diverses. Ceci n'est pas étonnant, car au fond, la "Yellow Ball" est universelle, n'est-ce pas ?
               </p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 border border-gray-100">
               <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Actualités tennis</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 font-serif">Un média social</h3>
               <p className="text-gray-600 leading-relaxed">
-                Restez informé des dernières actualités du tennis professionnel, des 
-                résultats des tournois aux nouvelles des joueurs et aux mises à jour de l'industrie.
+                Tennis Universel partage une vision sociétale. Peu importe d'où l'on vient, l'essentiel est d'échanger sur ce sport magnifique qui est très souvent victime de clichés et de pensées limitantes. Sentez-vous à l'aise de partager vos histoires et anecdotes à propos de la "Yellow Ball".
               </p>
             </div>
           </div>
 
           <div className="bg-black rounded-3xl p-12 text-center text-white">
-            <h2 className="text-3xl font-bold mb-4">Rejoignez notre communauté</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Suivez-nous sur Instagram pour ne jamais manquer une interview et faire partie de la conversation
+            <h2 className="text-3xl font-bold mb-6 font-serif">Dépasser les frontières</h2>
+            <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Tennis Universel a pour but de dépasser les frontières du tennis. S'adresser à des personnes qui n'ont jamais côtoyé la balle jaune est une motivation. Construire des ponts avec d'autres sports et d'autres domaines de la société, tels que la culture, l'environnement ou l'économie est également une volonté. Cassons les codes tous ensemble.
             </p>
             <a
               href="https://instagram.com/tennisuniversel"

@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InterviewCard from "../components/InterviewCard";
 import InstagramReelsSection from "../components/InstagramReelsSection";
+import InstagramReel from "../components/InstagramReel";
+import Link from "next/link";
 
 export default function Home() {
   const [latestInterviews] = useState([
@@ -39,44 +41,34 @@ export default function Home() {
     },
   ]);
 
-  const [recentInterviews] = useState([
-    {
-      id: 4,
-      guest: "Carlos Alcaraz",
-      date: "Nov 28, 2024",
-      description:
-        "Young champion talks about his rapid rise and future ambitions.",
-      duration: "42 min",
-      instagramUrl: "https://instagram.com/tennisuniversel",
-    },
-    {
-      id: 5,
-      guest: "Coco Gauff",
-      date: "Nov 20, 2024",
-      description:
-        "Rising star discusses her journey and aspirations in professional tennis.",
-      duration: "35 min",
-      instagramUrl: "https://instagram.com/tennisuniversel",
-    },
-    {
-      id: 6,
-      guest: "Serena Williams",
-      date: "Nov 15, 2024",
-      description:
-        "Legendary player reflects on her incredible career and legacy in tennis.",
-      duration: "55 min",
-      instagramUrl: "https://instagram.com/tennisuniversel",
-    },
-    {
-      id: 7,
-      guest: "Daniil Medvedev",
-      date: "Nov 10, 2024",
-      description:
-        "Discussing his unique playing style and tournament strategies.",
-      duration: "40 min",
-      instagramUrl: "https://instagram.com/tennisuniversel",
-    },
-  ]);
+  const [moreReels, setMoreReels] = useState([]);
+  const [loadingMoreReels, setLoadingMoreReels] = useState(true);
+
+  useEffect(() => {
+    // Fetch more reels (skip first 3, get next 4)
+    const fetchMoreReels = async () => {
+      try {
+        const response = await fetch("/api/instagram-reels?all=true");
+        if (response.ok) {
+          const data = await response.json();
+          if (data.data && data.data.length > 3) {
+            // Skip first 3, get next 4
+            const nextReels = data.data.slice(3, 7).map((reel) => ({
+              id: reel.id,
+              reelUrl: reel.reelUrl,
+            }));
+            setMoreReels(nextReels);
+          }
+        }
+      } catch (err) {
+        console.error("Error fetching more reels:", err);
+      } finally {
+        setLoadingMoreReels(false);
+      }
+    };
+
+    fetchMoreReels();
+  }, []);
 
   const [latestNews] = useState([
     {
@@ -140,7 +132,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-5">
                 <a
-                  href="#latest-interviews"
+                  href="/interviews"
                   className="bg-white text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center justify-center space-x-3 shadow-xl tracking-tight"
                 >
                   <span>Explorer les interviews</span>
@@ -264,20 +256,18 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              {latestInterviews.slice(0, 2).map((interview) => (
-                <InterviewCard
-                  key={interview.id}
-                  interview={interview}
-                  featured={false}
-                />
-              ))}
+            <div className="relative">
+              <img
+                src="/images/media-social.webp"
+                alt="Tennis Universel - Un média social"
+                className="w-full h-auto rounded-2xl object-cover shadow-xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Recent Interviews Grid */}
+      {/* More Interviews Grid */}
       <section className="py-40 px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
@@ -288,16 +278,75 @@ export default function Home() {
               Explorez nos archives de conversations exclusives
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {recentInterviews.map((interview) => (
-              <InterviewCard key={interview.id} interview={interview} />
-            ))}
-          </div>
+          {loadingMoreReels ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="bg-gray-100 rounded-2xl aspect-[9/16] animate-pulse"
+                ></div>
+              ))}
+            </div>
+          ) : moreReels.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                {moreReels.map((reel) => (
+                  <InstagramReel key={reel.id} reelUrl={reel.reelUrl} />
+                ))}
+              </div>
+              <div className="text-center">
+                <Link
+                  href="/interviews"
+                  className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+                >
+                  <span>Voir toutes les interviews</span>
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600 mb-8">
+                Plus d'interviews à venir bientôt
+              </p>
+              <Link
+                href="/interviews"
+                className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+              >
+                <span>Voir toutes les interviews</span>
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Latest News Section */}
-      <section className="py-40 px-6 lg:px-8 bg-gray-50">
+      {/* <section className="py-40 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
@@ -334,7 +383,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-40 px-6 lg:px-8 bg-black">

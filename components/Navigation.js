@@ -1,9 +1,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
+
+  // Pages where logo should always be black
+  const alwaysBlackLogoPages = ["/interviews", "/about"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,10 +18,14 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Determine if logo should be black
+  const shouldUseBlackLogo =
+    alwaysBlackLogoPages.includes(router.pathname) || isScrolled;
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        shouldUseBlackLogo
           ? "bg-white shadow-md backdrop-blur-md bg-white/95"
           : "bg-transparent"
       }`}
@@ -26,7 +35,11 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img
-              src={isScrolled ? "/images/logo-black.png" : "/images/logo.png"}
+              src={
+                shouldUseBlackLogo
+                  ? "/images/logo-black.png"
+                  : "/images/logo.png"
+              }
               alt="TennisUniversel Logo"
               className="h-6 w-auto transform group-hover:scale-105 transition-transform"
             />
@@ -37,7 +50,7 @@ export default function Navigation() {
             <Link
               href="/"
               className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
-                isScrolled
+                shouldUseBlackLogo
                   ? "text-gray-700 hover:bg-gray-100"
                   : "text-white/90 hover:bg-white/10"
               }`}
@@ -47,7 +60,7 @@ export default function Navigation() {
             <Link
               href="/interviews"
               className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
-                isScrolled
+                shouldUseBlackLogo
                   ? "text-gray-700 hover:bg-gray-100"
                   : "text-white/90 hover:bg-white/10"
               }`}
@@ -55,19 +68,9 @@ export default function Navigation() {
               Interviews
             </Link>
             <Link
-              href="/news"
-              className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
-                isScrolled
-                  ? "text-gray-700 hover:bg-gray-100"
-                  : "text-white/90 hover:bg-white/10"
-              }`}
-            >
-              Actualités
-            </Link>
-            <Link
               href="/about"
               className={`px-4 py-2 rounded-full font-medium text-sm transition-colors ${
-                isScrolled
+                shouldUseBlackLogo
                   ? "text-gray-700 hover:bg-gray-100"
                   : "text-white/90 hover:bg-white/10"
               }`}
@@ -79,12 +82,12 @@ export default function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               className={`ml-4 px-6 py-2.5 rounded-full font-semibold text-sm transition-all transform hover:scale-105 ${
-                isScrolled
+                shouldUseBlackLogo
                   ? "bg-black text-white hover:bg-gray-900"
                   : "bg-white text-black hover:bg-gray-100"
               }`}
             >
-              Suivre sur Instagram
+              Suivez-nous sur Instagram
             </a>
           </div>
 
@@ -92,7 +95,7 @@ export default function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled
+              shouldUseBlackLogo
                 ? "text-gray-700 hover:bg-gray-100"
                 : "text-white hover:bg-white/10"
             }`}

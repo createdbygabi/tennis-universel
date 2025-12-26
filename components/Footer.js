@@ -10,14 +10,14 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <img
                 src="/images/logo.png"
-                alt="TennisUniversel Logo"
+                alt="Tennis Universel Logo"
                 className="h-6 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-              TennisUniversel vous propose des interviews exclusives en direct
+              Tennis Universel vous propose des interviews exclusives en direct
               avec des légendes du tennis, des étoiles montantes et des experts
-              de l'industrie. Rejoignez-nous sur Instagram pour des
+              de l'industrie. <br /> Rejoignez-nous sur Instagram pour des
               conversations passionnantes sur le monde du tennis.
             </p>
             <a
@@ -55,14 +55,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/news"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Actualités
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/about"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
@@ -94,7 +86,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            Copyright © {new Date().getFullYear()} TennisUniversel. Tous droits
+            Copyright © {new Date().getFullYear()} Tennis Universel. Tous droits
             réservés.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
