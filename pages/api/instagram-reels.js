@@ -5,33 +5,57 @@ import fs from "fs";
 import path from "path";
 
 export default async function handler(req, res) {
+  // Set CORS headers
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const filePath = path.join(process.cwd(), "data", "instagram-reels.json");
     const { all } = req.query;
 
-    // Check if file exists
-    if (!fs.existsSync(filePath)) {
-      console.log("No reels file found, returning empty array");
+    // Try multiple possible paths for the JSON file
+    const possiblePaths = [
+      path.join(process.cwd(), "data", "instagram-reels.json"),
+      path.join(process.cwd(), "..", "data", "instagram-reels.json"),
+      path.join(__dirname, "..", "..", "data", "instagram-reels.json"),
+    ];
+
+    let filePath = null;
+    let cachedData = null;
+
+    // Try to find the file
+    for (const possiblePath of possiblePaths) {
+      if (fs.existsSync(possiblePath)) {
+        filePath = possiblePath;
+        try {
+          const fileContent = fs.readFileSync(possiblePath, "utf8");
+          cachedData = JSON.parse(fileContent);
+          break;
+        } catch (err) {
+          console.error(`[API] Error reading file at ${possiblePath}:`, err);
+          continue;
+        }
+      }
+    }
+
+    // If file not found, return empty array (don't fail)
+    if (!cachedData || !cachedData.reels) {
+      console.log(`[API] No reels file found. Returning empty array.`);
       return res.status(200).json({
         data: [],
         message: "No reels found",
       });
     }
 
-    // Read from JSON file
-    const fileContent = fs.readFileSync(filePath, "utf8");
-    const cachedData = JSON.parse(fileContent);
-
     // Return all reels if ?all=true, otherwise return last 3
     const reels =
       all === "true" ? cachedData.reels : cachedData.reels.slice(0, 3);
 
     console.log(
-      `Returning ${reels.length} reels from static data (all=${
+      `[API] Returning ${reels.length} reels from static data (all=${
         all === "true"
       }, last updated: ${cachedData.timestamp})`
     );
@@ -42,8 +66,9 @@ export default async function handler(req, res) {
       timestamp: cachedData.timestamp,
     });
   } catch (error) {
-    console.error("Error reading reels:", error);
+    console.error("[API] Error reading reels:", error);
 
+    // Always return 200 with empty array to prevent page crashes
     return res.status(200).json({
       data: [],
       error: error.message || "Failed to read reels",
