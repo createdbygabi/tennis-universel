@@ -1,8 +1,9 @@
-import '../styles/globals.css';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import "../styles/globals.css";
+import { appWithTranslation } from "next-i18next";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <Navigation />
@@ -11,3 +12,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default appWithTranslation(App);

@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "interviews": "Interviews",
+    "about": "À propos",
+    "news": "Actualités",
+    "followUs": "Suivez-nous sur Instagram",
+    "followUsShort": "Instagram",
+    "followUsMobile": "Suivre sur Instagram",
+    "openMenu": "Ouvrir le menu",
+    "language": "Langue"
+  },
+  "home": {
+    "title": "Tennis Universel - Interviews exclusives et actualités tennis",
+    "description": "Découvrez nos interviews exclusives avec des acteurs et actrices du monde tennistique. Un média social passionné par le tennis.",
+    "latestInterviews": "Dernières interviews",
+    "heroTitle": "Tennis Universel",
+    "heroSubtitle": "Découvrez nos interviews exclusives avec des acteurs et actrices du monde tennistique.",
+    "exploreInterviews": "Explorer les interviews",
+    "followUs": "Suivez-nous",
+    "about": {
+      "label": "À propos",
+      "title": "Un média social",
+      "description": "Un média passionné et animé par 2 questions : Comment le tennis influence-t-il la société ? Comment la société influence-t-elle le tennis ?",
+      "learnMore": "En savoir plus"
+    },
+    "moreInterviews": {
+      "title": "Plus d'interviews",
+      "description": "Explorez nos archives de conversations exclusives.",
+      "viewAll": "Voir toutes les interviews",
+      "comingSoon": "Plus d'interviews à venir bientôt."
+    },
+    "cta": {
+      "title": "Rejoignez la communauté",
+      "description": "Suivez-nous sur Instagram pour ne manquer aucune interview et faire partie de la conversation avec les fans de tennis du monde entier.",
+      "follow": "Suivre @tennisuniversel"
+    }
+  },
+  "footer": {
+    "description": "Tennis Universel vous propose des interviews exclusives en direct avec des acteurs et actrices du monde tennistique. Rejoignez-nous sur Instagram pour des conversations passionnantes sur le monde du tennis.",
+    "followUs": "Suivre sur Instagram",
+    "quickLinks": "LIENS RAPIDES",
+    "contact": "CONTACT",
+    "contactDescription": "Suivez-nous pour des interviews en direct et des actualités tennis.",
+    "copyright": "Copyright © {{year}} Tennis Universel. Tous droits réservés."
+  },
+  "about": {
+    "title": "À propos - Tennis Universel",
+    "description": "Tennis Universel est une communauté de passionné.es de tennis. Découvrez notre mission de rendre la balle jaune accessible à l'ensemble de l'humanité.",
+    "label": "À propos",
+    "mainTitle": "Tennis Universel",
+    "intro": "Nous sommes une communauté de passionné.es de tennis. Tout est parti d'une discussion Whatsapp pendant le covid entre ami.e.s et connaissances. Ce sport nous \"rend fou\" comme dirait Gilles Simon. Bienvenu.e.s à toutes et à tous sur Tennis Universel. Ce site web a pour but de rendre la balle jaune accessible à l'ensemble de l'humanité.",
+    "team": {
+      "title": "Une équipe passionnée",
+      "description": "Nous sommes une équipe originale composée d'individus aux racines diverses. Ceci n'est pas étonnant, car au fond, la \"Yellow Ball\" est universelle, n'est-ce pas ?"
+    },
+    "social": {
+      "title": "Un média social",
+      "description": "Tennis Universel partage une vision sociétale. Peu importe d'où l'on vient, l'essentiel est d'échanger sur ce sport magnifique qui est très souvent victime de clichés et de pensées limitantes. Sentez-vous à l'aise de partager vos histoires et anecdotes à propos de la \"Yellow Ball\"."
+    },
+    "beyond": {
+      "title": "Dépasser les frontières",
+      "description": "Tennis Universel a pour but de dépasser les frontières du tennis. S'adresser à des personnes qui n'ont jamais côtoyé la balle jaune est une motivation. Construire des ponts avec d'autres sports et d'autres domaines de la société, tels que la culture, l'environnement ou l'économie est également une volonté. Cassons les codes tous ensemble.",
+      "follow": "Suivre @tennisuniversel"
+    }
+  },
+  "interviews": {
+    "title": "Interviews - Tennis Universel",
+    "description": "Explorez notre collection complète d'interviews exclusives avec des professionnels du tennis. Des conversations authentiques avec des légendes et des étoiles montantes.",
+    "label": "Toutes les interviews",
+    "mainTitle": "Interviews exclusives",
+    "subtitle": "Explorez notre collection complète de conversations exclusives avec des professionnels du tennis",
+    "viewAllOnInstagram": "Voir toutes les interviews sur Instagram",
+    "viewOnInstagram": "Voir sur Instagram",
+    "moreInterviews": {
+      "title": "Découvrez encore plus d'interviews",
+      "description": "Suivez-nous sur Instagram pour ne manquer aucune interview et faire partie de la communauté Tennis Universel.",
+      "follow": "Suivez-nous sur Instagram"
+    },
+    "emptyState": "Aucun reel disponible pour le moment.",
+    "errors": {
+      "noReelsFound": "Aucun reel trouvé",
+      "loadError": "Impossible de charger les reels Instagram"
+    }
+  }
+}

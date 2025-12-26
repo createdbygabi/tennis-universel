@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "interviews": "Interviews",
+    "about": "About",
+    "news": "News",
+    "followUs": "Follow us on Instagram",
+    "followUsShort": "Instagram",
+    "followUsMobile": "Follow on Instagram",
+    "openMenu": "Open menu",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Tennis Universel - Exclusive interviews and tennis news",
+    "description": "Discover our exclusive interviews with tennis players and personalities. A social media passionate about tennis.",
+    "latestInterviews": "Latest interviews",
+    "heroTitle": "Tennis Universel",
+    "heroSubtitle": "Discover our exclusive interviews with tennis players and personalities.",
+    "exploreInterviews": "Explore interviews",
+    "followUs": "Follow us",
+    "about": {
+      "label": "About",
+      "title": "A social media",
+      "description": "A media passionate and driven by 2 questions: How does tennis influence society? How does society influence tennis?",
+      "learnMore": "Learn more"
+    },
+    "moreInterviews": {
+      "title": "More interviews",
+      "description": "Explore our archive of exclusive conversations.",
+      "viewAll": "View all interviews",
+      "comingSoon": "More interviews coming soon."
+    },
+    "cta": {
+      "title": "Join the community",
+      "description": "Follow us on Instagram to never miss an interview and be part of the conversation with tennis fans from around the world.",
+      "follow": "Follow @tennisuniversel"
+    }
+  },
+  "footer": {
+    "description": "Tennis Universel offers exclusive live interviews with tennis players and personalities. Join us on Instagram for exciting conversations about the tennis world.",
+    "followUs": "Follow on Instagram",
+    "quickLinks": "QUICK LINKS",
+    "contact": "CONTACT",
+    "contactDescription": "Follow us for live interviews and tennis news.",
+    "copyright": "Copyright © {{year}} Tennis Universel. All rights reserved."
+  },
+  "about": {
+    "title": "About - Tennis Universel",
+    "description": "Tennis Universel is a community of tennis enthusiasts. Discover our mission to make the yellow ball accessible to all of humanity.",
+    "label": "About",
+    "mainTitle": "Tennis Universel",
+    "intro": "We are a community of tennis enthusiasts. It all started with a WhatsApp discussion during COVID between friends and acquaintances. This sport makes us \"go crazy\" as Gilles Simon would say. Welcome everyone to Tennis Universel. This website aims to make the yellow ball accessible to all of humanity.",
+    "team": {
+      "title": "A passionate team",
+      "description": "We are an original team made up of individuals with diverse roots. This is not surprising, because deep down, the \"Yellow Ball\" is universal, isn't it?"
+    },
+    "social": {
+      "title": "A social media",
+      "description": "Tennis Universel shares a societal vision. No matter where we come from, the important thing is to exchange about this magnificent sport that is very often a victim of clichés and limiting thoughts. Feel free to share your stories and anecdotes about the \"Yellow Ball\"."
+    },
+    "beyond": {
+      "title": "Beyond borders",
+      "description": "Tennis Universel aims to go beyond the borders of tennis. Reaching out to people who have never encountered the yellow ball is a motivation. Building bridges with other sports and other areas of society, such as culture, environment or economics is also a desire. Let's break the codes together.",
+      "follow": "Follow @tennisuniversel"
+    }
+  },
+  "interviews": {
+    "title": "Interviews - Tennis Universel",
+    "description": "Explore our complete collection of exclusive interviews with tennis professionals. Authentic conversations with legends and rising stars.",
+    "label": "All interviews",
+    "mainTitle": "Exclusive interviews",
+    "subtitle": "Explore our complete collection of exclusive conversations with tennis professionals",
+    "viewAllOnInstagram": "View all interviews on Instagram",
+    "viewOnInstagram": "View on Instagram",
+    "moreInterviews": {
+      "title": "Discover even more interviews",
+      "description": "Follow us on Instagram to never miss an interview and be part of the Tennis Universel community.",
+      "follow": "Follow us on Instagram"
+    },
+    "emptyState": "No reels available at the moment.",
+    "errors": {
+      "noReelsFound": "No reels found",
+      "loadError": "Unable to load Instagram reels"
+    }
+  }
+}
