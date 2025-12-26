@@ -138,7 +138,13 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 pt-4 border-t border-gray-200">
+          <div
+            className={`md:hidden pb-6 pt-4 ${
+              shouldUseBlackLogo
+                ? "bg-white border-t border-gray-200"
+                : "bg-white border-t border-white/20"
+            }`}
+          >
             <div className="flex flex-col space-y-2">
               <Link
                 href="/"
@@ -153,13 +159,6 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t("nav.interviews")}
-              </Link>
-              <Link
-                href="/news"
-                className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t("nav.news")}
               </Link>
               <Link
                 href="/about"

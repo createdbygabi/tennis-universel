@@ -12,10 +12,10 @@
   },
   "home": {
     "title": "Tennis Universel - Exclusive interviews and tennis news",
-    "description": "Discover our exclusive interviews with tennis players and personalities. A social media passionate about tennis.",
+    "description": "Discover our exclusive interviews with figures from the tennis world. A social media passionate about tennis.",
     "latestInterviews": "Latest interviews",
     "heroTitle": "Tennis Universel",
-    "heroSubtitle": "Discover our exclusive interviews with tennis players and personalities.",
+    "heroSubtitle": "Discover our exclusive interviews with figures from the tennis world.",
     "exploreInterviews": "Explore interviews",
     "followUs": "Follow us",
     "about": {
@@ -30,6 +30,13 @@
       "viewAll": "View all interviews",
       "comingSoon": "More interviews coming soon."
     },
+    "reelsSection": {
+      "title": "Interviews",
+      "description": "Instagram live sessions with figures from the tennis world sharing their stories related to the yellow ball.",
+      "explore": "Explore",
+      "viewMore": "View more",
+      "emptyState": "No reels available at the moment."
+    },
     "cta": {
       "title": "Join the community",
       "description": "Follow us on Instagram to never miss an interview and be part of the conversation with tennis fans from around the world.",
@@ -37,7 +44,7 @@
     }
   },
   "footer": {
-    "description": "Tennis Universel offers exclusive live interviews with tennis players and personalities. Join us on Instagram for exciting conversations about the tennis world.",
+    "description": "Tennis Universel offers exclusive live interviews with figures from the tennis world. Join us on Instagram for exciting conversations about the tennis world.",
     "followUs": "Follow on Instagram",
     "quickLinks": "QUICK LINKS",
     "contact": "CONTACT",
@@ -66,10 +73,10 @@
   },
   "interviews": {
     "title": "Interviews - Tennis Universel",
-    "description": "Explore our complete collection of exclusive interviews with tennis professionals. Authentic conversations with legends and rising stars.",
+    "description": "Explore our complete collection of exclusive interviews with figures from the tennis world. Authentic conversations with legends and rising stars.",
     "label": "All interviews",
     "mainTitle": "Exclusive interviews",
-    "subtitle": "Explore our complete collection of exclusive conversations with tennis professionals",
+    "subtitle": "Explore our complete collection of exclusive conversations with figures from the tennis world.",
     "viewAllOnInstagram": "View all interviews on Instagram",
     "viewOnInstagram": "View on Instagram",
     "moreInterviews": {
@@ -79,8 +86,8 @@
     },
     "emptyState": "No reels available at the moment.",
     "errors": {
-      "noReelsFound": "No reels found",
-      "loadError": "Unable to load Instagram reels"
+      "noReelsFound": "No reels found.",
+      "loadError": "Unable to load Instagram reels."
     }
   }
 }

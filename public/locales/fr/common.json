@@ -30,6 +30,13 @@
       "viewAll": "Voir toutes les interviews",
       "comingSoon": "Plus d'interviews à venir bientôt."
     },
+    "reelsSection": {
+      "title": "Interviews",
+      "description": "Des lives Instagram avec des acteurs et actrices du monde tennistique racontant leurs histoires liées à la balle jaune.",
+      "explore": "Explorer",
+      "viewMore": "Voir plus",
+      "emptyState": "Aucun reel disponible pour le moment."
+    },
     "cta": {
       "title": "Rejoignez la communauté",
       "description": "Suivez-nous sur Instagram pour ne manquer aucune interview et faire partie de la conversation avec les fans de tennis du monde entier.",
@@ -66,10 +73,10 @@
   },
   "interviews": {
     "title": "Interviews - Tennis Universel",
-    "description": "Explorez notre collection complète d'interviews exclusives avec des professionnels du tennis. Des conversations authentiques avec des légendes et des étoiles montantes.",
+    "description": "Explorez notre collection complète d'interviews exclusives avec des acteurs et actrices du monde tennistique. Des conversations authentiques avec des légendes et des étoiles montantes.",
     "label": "Toutes les interviews",
     "mainTitle": "Interviews exclusives",
-    "subtitle": "Explorez notre collection complète de conversations exclusives avec des professionnels du tennis",
+    "subtitle": "Explorez notre collection complète de conversations exclusives avec des acteurs et actrices du monde tennistique.",
     "viewAllOnInstagram": "Voir toutes les interviews sur Instagram",
     "viewOnInstagram": "Voir sur Instagram",
     "moreInterviews": {

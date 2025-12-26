@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "next-i18next";
 import InstagramReel from "./InstagramReel";
 import Link from "next/link";
 
@@ -6,6 +7,7 @@ export default function InstagramReelsSection({
   limit = null,
   showViewMore = false,
 }) {
+  const { t } = useTranslation("common");
   const [reels, setReels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -76,17 +78,16 @@ export default function InstagramReelsSection({
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
-              Interviews
+              {t("home.reelsSection.title")}
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
-              Des lives Instagram avec des acteurs et actrices du monde
-              tennistique qui racontent leurs histoires liées à la balle jaune.
+              {t("home.reelsSection.description")}
             </p>
             <a
               href="/interviews"
               className="inline-flex items-center space-x-2 sm:space-x-3 text-gray-900 hover:text-black font-semibold text-sm sm:text-base md:text-lg transition-colors group"
             >
-              <span>Explorer</span>
+              <span>{t("home.reelsSection.explore")}</span>
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -123,17 +124,16 @@ export default function InstagramReelsSection({
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 sm:mb-16 md:mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
-            Interviews
+            {t("home.reelsSection.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
-            Des lives Instagram avec des acteurs et actrices du monde
-            tennistique qui racontent leurs histoires liées à la balle jaune.
+            {t("home.reelsSection.description")}
           </p>
           <a
             href="/interviews"
             className="inline-flex items-center space-x-2 sm:space-x-3 text-gray-900 hover:text-black font-semibold text-sm sm:text-base md:text-lg transition-colors group"
           >
-            <span>Explorer</span>
+            <span>{t("home.reelsSection.explore")}</span>
             <svg
               className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform"
               fill="none"
@@ -162,7 +162,7 @@ export default function InstagramReelsSection({
                   href="/interviews"
                   className="inline-flex items-center space-x-2 sm:space-x-3 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
                 >
-                  <span>Voir plus</span>
+                  <span>{t("home.reelsSection.viewMore")}</span>
                   <svg
                     className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
@@ -183,7 +183,7 @@ export default function InstagramReelsSection({
         ) : (
           <div className="text-center py-12 sm:py-20">
             <p className="text-gray-600 text-sm sm:text-base md:text-lg">
-              Aucun reel disponible pour le moment.
+              {t("home.reelsSection.emptyState")}
             </p>
           </div>
         )}
