@@ -31,7 +31,7 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <img
@@ -41,7 +41,7 @@ export default function Navigation() {
                   : "/images/logo.png"
               }
               alt="TennisUniversel Logo"
-              className="h-6 w-auto transform group-hover:scale-105 transition-transform"
+              className="h-5 sm:h-6 w-auto transform group-hover:scale-105 transition-transform"
             />
           </Link>
 
@@ -81,13 +81,16 @@ export default function Navigation() {
               href="https://instagram.com/tennisuniversel"
               target="_blank"
               rel="noopener noreferrer"
-              className={`ml-4 px-6 py-2.5 rounded-full font-semibold text-sm transition-all transform hover:scale-105 ${
+              className={`ml-2 sm:ml-4 px-4 py-2 sm:px-6 sm:py-2.5 rounded-full font-semibold text-xs sm:text-sm transition-all transform hover:scale-105 ${
                 shouldUseBlackLogo
                   ? "bg-black text-white hover:bg-gray-900"
                   : "bg-white text-black hover:bg-gray-100"
               }`}
             >
-              Suivez-nous sur Instagram
+              <span className="hidden lg:inline">
+                Suivez-nous sur Instagram
+              </span>
+              <span className="lg:hidden">Instagram</span>
             </a>
           </div>
 

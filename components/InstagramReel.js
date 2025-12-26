@@ -37,8 +37,8 @@ export default function InstagramReel({ reelUrl }) {
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
-      <div ref={containerRef} className="p-6">
+    <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
+      <div ref={containerRef} className="p-3 sm:p-4 md:p-6">
         <blockquote
           className="instagram-media"
           data-instgrm-captioned
@@ -50,7 +50,7 @@ export default function InstagramReel({ reelUrl }) {
             borderRadius: '3px',
             margin: '1px',
             maxWidth: '100%',
-            minWidth: '326px',
+            minWidth: '280px',
             padding: '0',
             width: 'calc(100% - 2px)',
           }}

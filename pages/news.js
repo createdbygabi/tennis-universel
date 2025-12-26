@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 export default function News() {
   const newsArticles = [
     {
@@ -57,54 +59,72 @@ export default function News() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-24 px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 block">
-            Actualités tennis
-          </span>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Dernières actualités
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Restez informé des dernières actualités du monde du tennis
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newsArticles.map((article) => (
-            <article
-              key={article.id}
-              className="bg-white rounded-2xl border border-gray-100 hover:shadow-xl transition-all overflow-hidden group"
-            >
-              {article.image && (
-                <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+    <>
+      <Head>
+        <title>Actualités - Tennis Universel</title>
+        <meta
+          name="description"
+          content="Restez informé des dernières actualités du monde du tennis. Résultats de tournois, nouvelles des joueurs et mises à jour de l'industrie."
+        />
+        <meta property="og:title" content="Actualités - Tennis Universel" />
+        <meta
+          property="og:description"
+          content="Restez informé des dernières actualités du monde du tennis."
+        />
+        <meta
+          property="og:url"
+          content="https://www.tennisuniversel.com/news"
+        />
+      </Head>
+      <div className="min-h-screen pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <span className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 block">
+              Actualités tennis
+            </span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
+              Dernières actualités
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+              Restez informé des dernières actualités du monde du tennis
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            {newsArticles.map((article) => (
+              <article
+                key={article.id}
+                className="bg-white rounded-xl sm:rounded-2xl border border-gray-100 hover:shadow-xl transition-all overflow-hidden group"
+              >
+                {article.image && (
+                  <div className="h-48 sm:h-56 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div className="p-4 sm:p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      {article.category}
+                    </span>
+                    <span className="text-xs text-gray-500 font-medium">
+                      {article.date}
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2 group-hover:text-black transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    {article.excerpt}
+                  </p>
                 </div>
-              )}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                    {article.category}
-                  </span>
-                  <span className="text-xs text-gray-500 font-medium">
-                    {article.date}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-black transition-colors">
-                  {article.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {article.excerpt}
-                </p>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

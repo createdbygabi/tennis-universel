@@ -72,23 +72,23 @@ export default function InstagramReelsSection({
 
   if (loading) {
     return (
-      <section className="py-40 px-6 lg:px-8 bg-white">
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
+          <div className="mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
               Interviews
             </h2>
-            <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-12 font-light tracking-tight">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
               Des lives Instagram avec des acteurs et actrices du monde
               tennistique qui racontent leurs histoires liées à la balle jaune
             </p>
             <a
               href="/interviews"
-              className="inline-flex items-center space-x-3 text-gray-900 hover:text-black font-semibold text-lg transition-colors group"
+              className="inline-flex items-center space-x-2 sm:space-x-3 text-gray-900 hover:text-black font-semibold text-sm sm:text-base md:text-lg transition-colors group"
             >
               <span>Explorer</span>
               <svg
-                className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -102,11 +102,11 @@ export default function InstagramReelsSection({
               </svg>
             </a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-20">
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="bg-gray-100 rounded-2xl aspect-[9/16] animate-pulse"
+                className="bg-gray-100 rounded-xl sm:rounded-2xl aspect-[9/16] animate-pulse"
               ></div>
             ))}
           </div>
@@ -119,23 +119,23 @@ export default function InstagramReelsSection({
   // This prevents the page from breaking if API fails
 
   return (
-    <section className="py-40 px-6 lg:px-8 bg-white">
+    <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
             Interviews
           </h2>
-          <p className="text-2xl md:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-12 font-light tracking-tight">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-4xl leading-relaxed mb-8 sm:mb-10 md:mb-12 font-light tracking-tight">
             Des lives Instagram avec des acteurs et actrices du monde
             tennistique qui racontent leurs histoires liées à la balle jaune
           </p>
           <a
             href="/interviews"
-            className="inline-flex items-center space-x-3 text-gray-900 hover:text-black font-semibold text-lg transition-colors group"
+            className="inline-flex items-center space-x-2 sm:space-x-3 text-gray-900 hover:text-black font-semibold text-sm sm:text-base md:text-lg transition-colors group"
           >
             <span>Explorer</span>
             <svg
-              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+              className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -151,7 +151,7 @@ export default function InstagramReelsSection({
         </div>
         {reels.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-20">
               {reels.map((reel) => (
                 <InstagramReel key={reel.id} reelUrl={reel.reelUrl} />
               ))}
@@ -160,11 +160,11 @@ export default function InstagramReelsSection({
               <div className="text-center">
                 <Link
                   href="/interviews"
-                  className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+                  className="inline-flex items-center space-x-2 sm:space-x-3 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
                 >
                   <span>Voir plus</span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -181,8 +181,8 @@ export default function InstagramReelsSection({
             )}
           </>
         ) : (
-          <div className="text-center py-20">
-            <p className="text-gray-600 text-lg">
+          <div className="text-center py-12 sm:py-20">
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg">
               Aucun reel disponible pour le moment.
             </p>
           </div>

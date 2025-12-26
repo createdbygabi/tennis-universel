@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
 import InterviewCard from "../components/InterviewCard";
 import InstagramReelsSection from "../components/InstagramReelsSection";
 import InstagramReel from "../components/InstagramReel";
@@ -98,78 +99,104 @@ export default function Home() {
   ]);
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section - Full Height */}
-      <section className="relative h-screen flex items-center px-6 lg:px-8 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-black"></div>
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-100"
-            style={{
-              backgroundImage: "url('/images/hero.jpg')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
-          {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/30 to-black/40"></div> */}
-        </div>
+    <>
+      <Head>
+        <title>
+          Tennis Universel - Interviews exclusives et actualités tennis
+        </title>
+        <meta
+          name="description"
+          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie. Un média social passionné par le tennis."
+        />
+        <meta
+          property="og:title"
+          content="Tennis Universel - Interviews exclusives et actualités tennis"
+        />
+        <meta
+          property="og:description"
+          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie."
+        />
+        <meta property="og:url" content="https://www.tennisuniversel.com" />
+        <meta
+          name="twitter:title"
+          content="Tennis Universel - Interviews exclusives et actualités tennis"
+        />
+        <meta
+          name="twitter:description"
+          content="Découvrez nos interviews exclusives avec des légendes du tennis, des étoiles montantes et des experts de l'industrie."
+        />
+      </Head>
+      <div className="min-h-screen">
+        {/* Hero Section - Full Height */}
+        <section className="relative h-screen flex items-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-black"></div>
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-100"
+              style={{
+                backgroundImage: "url('/images/hero.jpg')",
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
+          </div>
 
-        <div className="max-w-7xl mx-auto relative z-10 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Headline */}
-            <div className="text-white">
-              <div className="inline-block mb-6">
-                <span className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Dernières interviews
-                </span>
-              </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-10 leading-[1.05] font-serif tracking-tight">
-                Tennis Universel
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 leading-relaxed tracking-tight font-light">
-                Découvrez nos interviews exclusives avec des légendes du tennis,
-                des étoiles montantes et des experts de l'industrie
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5">
-                <a
-                  href="/interviews"
-                  className="bg-white text-gray-900 px-10 py-5 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center justify-center space-x-3 shadow-xl tracking-tight"
-                >
-                  <span>Explorer les interviews</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+          <div className="max-w-7xl mx-auto relative z-10 w-full">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left Side - Headline */}
+              <div className="text-white">
+                <div className="inline-block mb-4 sm:mb-6">
+                  <span className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
+                    Dernières interviews
+                  </span>
+                </div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-6 sm:mb-8 md:mb-10 leading-[1.05] font-serif tracking-tight">
+                  Tennis Universel
+                </h1>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-8 sm:mb-10 md:mb-12 leading-relaxed tracking-tight font-light">
+                  Découvrez nos interviews exclusives avec des légendes du
+                  tennis, des étoiles montantes et des experts de l'industrie
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5">
+                  <a
+                    href="/interviews"
+                    className="bg-white text-gray-900 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-100 transition-all transform hover:scale-105 flex items-center justify-center space-x-2 sm:space-x-3 shadow-xl tracking-tight"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://instagram.com/tennisuniversel"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-white text-white px-10 py-5 rounded-full font-semibold text-lg hover:bg-white/10 transition-all flex items-center justify-center space-x-3 tracking-tight"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+                    <span>Explorer les interviews</span>
+                    <svg
+                      className="w-4 h-4 sm:w-5 sm:h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://instagram.com/tennisuniversel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-2 border-white text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-white/10 transition-all flex items-center justify-center space-x-2 sm:space-x-3 tracking-tight"
                   >
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                  </svg>
-                  <span>Suivez-nous</span>
-                </a>
+                    <svg
+                      className="w-5 h-5 sm:w-6 sm:h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    <span>Suivez-nous</span>
+                  </a>
+                </div>
               </div>
-            </div>
 
-            {/* Right Side - Featured Interview Preview */}
-            {/* <div className="grid grid-cols-2 gap-4">
+              {/* Right Side - Featured Interview Preview */}
+              {/* <div className="grid grid-cols-2 gap-4">
               {latestInterviews.slice(0, 2).map((interview, index) => (
                 <div
                   key={interview.id}
@@ -213,95 +240,121 @@ export default function Home() {
                 </div>
               ))}
             </div> */}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Instagram Reels Section - Last 3 Interviews */}
-      <InstagramReelsSection limit={3} showViewMore={true} />
+        {/* Instagram Reels Section - Last 3 Interviews */}
+        <InstagramReelsSection limit={3} showViewMore={true} />
 
-      {/* About Section */}
-      <section className="py-40 px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6 block">
-                À propos
-              </span>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
-                Un média social
-              </h2>
-              <p className="text-2xl md:text-3xl text-gray-700 leading-relaxed mb-10 font-light tracking-tight">
-                Un média passionné et animé par 2 questions : Comment le tennis
-                influence-t-il la société ? Comment la société influence-t-elle
-                le tennis ?
-              </p>
-              <a
-                href="/about"
-                className="inline-flex items-center space-x-3 text-gray-900 hover:text-black font-semibold text-lg transition-colors group"
-              >
-                <span>En savoir plus</span>
-                <svg
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        {/* About Section */}
+        <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center">
+              <div>
+                <span className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 sm:mb-6 block">
+                  À propos
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
+                  Un média social
+                </h2>
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed mb-8 sm:mb-10 font-light tracking-tight">
+                  Un média passionné et animé par 2 questions : Comment le
+                  tennis influence-t-il la société ? Comment la société
+                  influence-t-elle le tennis ?
+                </p>
+                <a
+                  href="/about"
+                  className="inline-flex items-center space-x-2 sm:space-x-3 text-gray-900 hover:text-black font-semibold text-base sm:text-lg transition-colors group"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </a>
-            </div>
-            <div className="relative">
-              <img
-                src="/images/media-social.webp"
-                alt="Tennis Universel - Un média social"
-                className="w-full h-auto rounded-2xl object-cover shadow-xl"
-              />
+                  <span>En savoir plus</span>
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div className="relative mt-8 lg:mt-0">
+                <img
+                  src="/images/media-social.webp"
+                  alt="Tennis Universel - Un média social"
+                  className="w-full h-auto rounded-xl sm:rounded-2xl object-cover shadow-xl"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* More Interviews Grid */}
-      <section className="py-40 px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
-              Plus d'interviews
-            </h2>
-            <p className="text-2xl md:text-3xl text-gray-700 leading-relaxed font-light tracking-tight mb-12">
-              Explorez nos archives de conversations exclusives
-            </p>
-          </div>
-          {loadingMoreReels ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="bg-gray-100 rounded-2xl aspect-[9/16] animate-pulse"
-                ></div>
-              ))}
+        {/* More Interviews Grid */}
+        <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 sm:mb-16 md:mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 font-serif leading-[1.05] tracking-tight">
+                Plus d'interviews
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed font-light tracking-tight mb-8 sm:mb-10 md:mb-12">
+                Explorez nos archives de conversations exclusives
+              </p>
             </div>
-          ) : moreReels.length > 0 ? (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                {moreReels.map((reel) => (
-                  <InstagramReel key={reel.id} reelUrl={reel.reelUrl} />
+            {loadingMoreReels ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="bg-gray-100 rounded-xl sm:rounded-2xl aspect-[9/16] animate-pulse"
+                  ></div>
                 ))}
               </div>
-              <div className="text-center">
+            ) : moreReels.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12">
+                  {moreReels.map((reel) => (
+                    <InstagramReel key={reel.id} reelUrl={reel.reelUrl} />
+                  ))}
+                </div>
+                <div className="text-center">
+                  <Link
+                    href="/interviews"
+                    className="inline-flex items-center space-x-2 sm:space-x-3 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+                  >
+                    <span>Voir toutes les interviews</span>
+                    <svg
+                      className="w-4 h-4 sm:w-5 sm:h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
+                  Plus d'interviews à venir bientôt
+                </p>
                 <Link
                   href="/interviews"
-                  className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
+                  className="inline-flex items-center space-x-2 sm:space-x-3 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
                 >
                   <span>Voir toutes les interviews</span>
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 sm:w-5 sm:h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -315,38 +368,12 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
-            </>
-          ) : (
-            <div className="text-center py-12">
-              <p className="text-gray-600 mb-8">
-                Plus d'interviews à venir bientôt
-              </p>
-              <Link
-                href="/interviews"
-                className="inline-flex items-center space-x-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
-              >
-                <span>Voir toutes les interviews</span>
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </Link>
-            </div>
-          )}
-        </div>
-      </section>
+            )}
+          </div>
+        </section>
 
-      {/* Latest News Section */}
-      {/* <section className="py-40 px-6 lg:px-8 bg-gray-50">
+        {/* Latest News Section */}
+        {/* <section className="py-40 px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 font-serif leading-[1.05] tracking-tight">
@@ -385,29 +412,35 @@ export default function Home() {
         </div>
       </section> */}
 
-      {/* CTA Section */}
-      <section className="py-40 px-6 lg:px-8 bg-black">
-        <div className="max-w-5xl mx-auto text-center text-white">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 font-serif leading-[1.05] tracking-tight">
-            Rejoignez la communauté
-          </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-16 max-w-3xl mx-auto leading-relaxed font-light tracking-tight">
-            Suivez-nous sur Instagram pour ne manquer aucune interview et faire
-            partie de la conversation avec les fans de tennis du monde entier.
-          </p>
-          <a
-            href="https://instagram.com/tennisuniversel"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center space-x-3 bg-white text-black px-12 py-6 rounded-full font-semibold text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl tracking-tight"
-          >
-            <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-            </svg>
-            <span>Suivre @tennisuniversel</span>
-          </a>
-        </div>
-      </section>
-    </div>
+        {/* CTA Section */}
+        <section className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-black">
+          <div className="max-w-5xl mx-auto text-center text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 font-serif leading-[1.05] tracking-tight">
+              Rejoignez la communauté
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white/90 mb-10 sm:mb-12 md:mb-16 max-w-3xl mx-auto leading-relaxed font-light tracking-tight px-4">
+              Suivez-nous sur Instagram pour ne manquer aucune interview et
+              faire partie de la conversation avec les fans de tennis du monde
+              entier.
+            </p>
+            <a
+              href="https://instagram.com/tennisuniversel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 sm:space-x-3 bg-white text-black px-8 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-full font-semibold text-sm sm:text-base md:text-lg lg:text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl tracking-tight"
+            >
+              <svg
+                className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              <span>Suivre @tennisuniversel</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
