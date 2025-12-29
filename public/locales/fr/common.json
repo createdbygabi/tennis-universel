@@ -56,14 +56,17 @@
     "description": "Tennis Universel est une communauté de passionné.es de tennis. Découvrez notre mission de rendre la balle jaune accessible à l'ensemble de l'humanité.",
     "label": "À propos",
     "mainTitle": "Tennis Universel",
+    "introTitle": "Qui sommes-nous ?",
     "intro": "Nous sommes une communauté de passionné.es de tennis. Tout est parti d'une discussion Whatsapp pendant le covid entre ami.e.s et connaissances. Ce sport nous \"rend fou\" comme dirait Gilles Simon. Bienvenu.e.s à toutes et à tous sur Tennis Universel. Ce site web a pour but de rendre la balle jaune accessible à l'ensemble de l'humanité.",
     "team": {
       "title": "Une équipe passionnée",
-      "description": "Nous sommes une équipe originale composée d'individus aux racines diverses. Ceci n'est pas étonnant, car au fond, la \"Yellow Ball\" est universelle, n'est-ce pas ?"
+      "description": "Nous sommes une équipe originale composée d'individus aux racines diverses. Ceci n'est pas étonnant, car au fond, la \"Yellow Ball\" est universelle, n'est-ce pas ?",
+      "button": "Voir"
     },
     "social": {
       "title": "Un média social",
-      "description": "Tennis Universel partage une vision sociétale. Peu importe d'où l'on vient, l'essentiel est d'échanger sur ce sport magnifique qui est très souvent victime de clichés et de pensées limitantes. Sentez-vous à l'aise de partager vos histoires et anecdotes à propos de la \"Yellow Ball\"."
+      "description": "Tennis Universel partage une vision sociétale. Peu importe d'où l'on vient, l'essentiel est d'échanger sur ce sport magnifique qui est très souvent victime de clichés et de pensées limitantes. Sentez-vous à l'aise de partager vos histoires et anecdotes à propos de la \"Yellow Ball\".",
+      "button": "Voir"
     },
     "beyond": {
       "title": "Dépasser les frontières",

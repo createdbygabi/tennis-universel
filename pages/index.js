@@ -121,7 +121,8 @@ export default function Home() {
             <div
               className="absolute inset-0 bg-cover bg-center opacity-100"
               style={{
-                backgroundImage: "url('/images/hero.jpg')",
+                // backgroundImage: "url('/images/hero.jpg')",
+                backgroundImage: "url('/images/hero_2.webp')",
               }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>

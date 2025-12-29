@@ -56,14 +56,17 @@
     "description": "Tennis Universel is a community of tennis enthusiasts. Discover our mission to make the yellow ball accessible to all of humanity.",
     "label": "About",
     "mainTitle": "Tennis Universel",
+    "introTitle": "Who are we?",
     "intro": "We are a community of tennis enthusiasts. It all started with a WhatsApp discussion during COVID between friends and acquaintances. This sport makes us \"go crazy\" as Gilles Simon would say. Welcome everyone to Tennis Universel. This website aims to make the yellow ball accessible to all of humanity.",
     "team": {
       "title": "A passionate team",
-      "description": "We are an original team made up of individuals with diverse roots. This is not surprising, because deep down, the \"Yellow Ball\" is universal, isn't it?"
+      "description": "We are an original team made up of individuals with diverse roots. This is not surprising, because deep down, the \"Yellow Ball\" is universal, isn't it?",
+      "button": "See"
     },
     "social": {
       "title": "A social media",
-      "description": "Tennis Universel shares a societal vision. No matter where we come from, the important thing is to exchange about this magnificent sport that is very often a victim of clichés and limiting thoughts. Feel free to share your stories and anecdotes about the \"Yellow Ball\"."
+      "description": "Tennis Universel shares a societal vision. No matter where we come from, the important thing is to exchange about this magnificent sport that is very often a victim of clichés and limiting thoughts. Feel free to share your stories and anecdotes about the \"Yellow Ball\".",
+      "button": "See"
     },
     "beyond": {
       "title": "Beyond borders",
