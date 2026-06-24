@@ -23,6 +23,13 @@ export default function Document() {
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tennisuniversel" />
+
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6744889901468490"
+          crossOrigin="anonymous"
+        />
       </Head>
       <body>
         <Main />
